@@ -6,7 +6,7 @@ const router = createRouter();
 app.use(router);
 
 router.get(
-  "/api",
+  "/",
   defineEventHandler((event) => {
     return { message: "⚡️ Tadaa!" };
   })
