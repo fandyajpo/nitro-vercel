@@ -1,3 +1,3 @@
 export default defineEventHandler(() => {
-  return { sum: "OI" };
+  return { sum: "Hai" };
 });
