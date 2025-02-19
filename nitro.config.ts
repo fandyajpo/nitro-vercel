@@ -9,4 +9,5 @@ export default defineNitroConfig({
   runtimeConfig: {
     GITHUB_TOKEN: process.env.GITHUB_TOKEN, // `dev_token` is the default value
   },
+  $meta: { name: "Fandy Nitro" },
 });
