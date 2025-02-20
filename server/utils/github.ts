@@ -1,5 +1,4 @@
 import type { H3Event } from "h3";
-import { useRuntimeConfig } from "#imports";
 
 export const cachedGithubProfile = defineCachedFunction(
   async (event: H3Event, name: string) => {

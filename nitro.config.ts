@@ -5,9 +5,12 @@ export default defineNitroConfig({
   compatibilityDate: "2025-02-16",
   experimental: {
     asyncContext: true,
+    typescriptBundlerResolution: true,
   },
   runtimeConfig: {
-    GITHUB_TOKEN: process.env.GITHUB_TOKEN, // `dev_token` is the default value
+    GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+    JOSE_SECRET: process.env.JOSE_SECRET,
+    VERCEL_BYPASS_TOKEN: process.env.VERCEL_BYPASS_TOKEN,
   },
-  $meta: { name: "Fandy Nitro" },
+  vercel: { config: { bypassToken: process.env.VERCEL_BYPASS_TOKEN } },
 });
