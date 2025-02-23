@@ -1,3 +1,3 @@
 export default defineEventHandler((event) => {
-  console.log(event.path);
+  console.log(event.path, "Middleware");
 });

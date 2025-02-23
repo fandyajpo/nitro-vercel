@@ -1,3 +1,3 @@
 export default defineEventHandler((event) => {
-  return send(event, "Fanvercel");
+  return send(event, "Generate new intance");
 });

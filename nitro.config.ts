@@ -1,11 +1,15 @@
 //https://nitro.unjs.io/config
 export default defineNitroConfig({
+  dev: true,
   srcDir: "server",
   errorHandler: "~/error",
   compatibilityDate: "2025-02-16",
   experimental: {
+    tasks: true,
     asyncContext: true,
-    typescriptBundlerResolution: true,
+  },
+  scheduledTasks: {
+    "* * * * *": ["generate:intance"],
   },
   runtimeConfig: {
     GITHUB_TOKEN: process.env.GITHUB_TOKEN,

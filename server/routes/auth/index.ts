@@ -1,8 +1,7 @@
 import { encrypt } from "~/utils/jose";
 
-export default defineEventHandler({
-  handler: async (event) => {
-    const cookie = encrypt(event, { name: "fandy" });
-    return cookie;
-  },
+export default defineEventHandler(async (event) => {
+  const cookie: string = await encrypt({ name: "fandy" });
+  setCookie(event, "NitroCook", cookie);
+  return cookie;
 });
