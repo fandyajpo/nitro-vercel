@@ -1,6 +1,5 @@
 //https://nitro.unjs.io/config
 export default defineNitroConfig({
-  dev: true,
   srcDir: "server",
   errorHandler: "~/error",
   compatibilityDate: "2025-02-16",
