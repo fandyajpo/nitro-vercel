@@ -12,17 +12,25 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: oven-sh/setup-bun@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-      - run: bun install
-      - run: bunx nitro build
+      - name: Install Dependencies
+        run: bun install
+      - name: Build Project
+        run: bunx nitro build
   deployment:
     name: Deploy
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - uses: oven-sh/setup-bun@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
       - name: Install Vercel CLI
