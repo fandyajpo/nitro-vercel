@@ -9,6 +9,6 @@ export default defineEventHandler(async () => {
     funProject: {
       wheelOfname: "https://roulette-react-spring.vercel.app/",
     },
-    test: true,
+    // test: true,
   };
 });
