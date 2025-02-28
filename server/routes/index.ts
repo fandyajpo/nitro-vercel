@@ -10,7 +10,5 @@ export default defineEventHandler(async (event) => {
     funProject: {
       wheelOfname: "https://roulette-react-spring.vercel.app/",
     },
-    test: config.NITRO_ENV,
-    // TEST
   };
 });
