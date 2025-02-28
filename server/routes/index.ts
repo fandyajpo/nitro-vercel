@@ -1,6 +1,7 @@
 import { getAge } from "~/utils";
 
-export default defineEventHandler(async () => {
+export default defineEventHandler(async (event) => {
+  const config = useRuntimeConfig(event);
   return {
     name: "Fandy Ahmad Januar Pratama",
     born: "2003-01-11",
@@ -9,7 +10,7 @@ export default defineEventHandler(async () => {
     funProject: {
       wheelOfname: "https://roulette-react-spring.vercel.app/",
     },
-    test: process.env.ENV,
+    test: config.NITRO_ENV,
     // TEST
   };
 });
