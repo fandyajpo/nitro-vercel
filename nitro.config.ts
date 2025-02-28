@@ -11,6 +11,10 @@ export default defineNitroConfig({
     "* * * * *": ["generate:intance"],
   },
   runtimeConfig: {
+    NITRO_ENV:
+      process.env.NITRO_ENV === "development"
+        ? process.env.NITRO_ENV
+        : "production",
     GITHUB_TOKEN: process.env.GITHUB_TOKEN,
     JOSE_SECRET: process.env.JOSE_SECRET,
     VERCEL_BYPASS_TOKEN: process.env.VERCEL_BYPASS_TOKEN,
