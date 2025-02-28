@@ -57,7 +57,7 @@ jobs:
         run: vercel pull --yes --environment=${{ env.DEPLOY_ENV }} --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Looking For Vercel Environment
-        run: vercel env ls
+        run: vercel env ls --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Build Project Artifacts
         run: |
