@@ -10,5 +10,6 @@ export default defineEventHandler(async () => {
       wheelOfname: "https://roulette-react-spring.vercel.app/",
     },
     test: process.env.ENV,
+    // TEST
   };
 });
