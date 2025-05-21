@@ -7,9 +7,6 @@ export default defineNitroConfig({
     tasks: true,
     asyncContext: true,
   },
-  scheduledTasks: {
-    "* * * * *": ["generate:intance"],
-  },
   runtimeConfig: {
     NITRO_ENV:
       process.env.NITRO_ENV === "development"
