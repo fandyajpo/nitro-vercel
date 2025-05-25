@@ -5,3 +5,4 @@ export default defineNitroErrorHandler((error: H3Error, event) => {
   setResponseHeader(event, "Content-Type", "application/json");
   return sendError(event, error);
 });
+//
