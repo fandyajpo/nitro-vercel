@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/kamu/repo.git'
+                echo 'Building Checkout...'
+                // git branch: 'main', url: 'https://github.com/kamu/repo.git'
             }
         }
 
