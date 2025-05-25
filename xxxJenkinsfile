@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/kamu/repo.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building project...'
+                // contoh: sh 'npm install'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // contoh: sh 'npm test'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                // contoh: sh 'scp -r ./dist user@host:/path/to/deploy'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline sukses!'
+        }
+        failure {
+            echo 'Pipeline gagal!'
+        }
+    }
+}
